@@ -38,6 +38,13 @@ class HomeController extends Controller {
 	 */
 	public function store(Request $request)
 	{
+
+		header("Access-Control-Allow-Origin: *");
+	 	$headers = [
+            'Access-Control-Allow-Methods'=> 'POST, GET, OPTIONS, PUT, DELETE',
+            'Access-Control-Allow-Headers'=> 'Content-Type, X-Auth-Token, Origin'
+        ];
+        
 		$home = new Home();
 
 		$home->name = $request->input("name");
