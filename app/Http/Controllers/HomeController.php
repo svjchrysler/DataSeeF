@@ -53,8 +53,8 @@ class HomeController extends Controller {
         $home->descripcion = $request->input("descripcion");
 
 		$home->save();
-
-		return redirect()->route('homes.index')->with('message', 'Item created successfully.');
+		return 'datos guardados';
+		// return redirect()->route('homes.index')->with('message', 'Item created successfully.');
 	}
 
 	/**
